@@ -1,3 +1,3 @@
 [submodule "~/dasc1104project/data/tidytuesday/data"] 
-path = ~/dasc1104project/data/tidytuesday/data
+path = "~/dasc1104project/data/tidytuesday/data"
 url = git://https://github.com/rfordatascience/tidytuesday.git/
