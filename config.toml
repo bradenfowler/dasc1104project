@@ -23,7 +23,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
     
 [[menu.main]]
     name = "LinkedIn"
-    url = "www.linkedin.com/in/braden-fowler-6341931ba"
+    url = "https://www.linkedin.com/in/braden-fowler-6341931ba/"
 
 [params]
     description = "A website built through Hugo and blogdown."
