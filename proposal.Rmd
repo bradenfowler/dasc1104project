@@ -48,7 +48,9 @@ glimpse(dat3)
 glimpse(dat4)
 ```
 
-Using the data from TidyTuesdays website, I am going to look at dog descriptions, exporting and importing of dgos, and dogs that have traveled. The first data set contains 58,180 observations and 36 variables. The second data set contains 90 observations and 5 variables. The third data set contains 6,194 observations and 8 variables. From these data sets I can see which dogs are better able to perform tricks, which dogs travel more than other dogs, whether these certain dogs are mixed, or purebred, their colors, sex, size, coat length, and many others. Using this data you can find out quite a bit about 
-  Question 1: Is there a trend for housing price index during a recession?
-  Question 2: Which recession was the worst in terms of mortgage rates and housing price index?
-  Question 3: Is there a trend for mortgage rates during a recession?
+Using the data from TidyTuesdays website, I am going to look at dog descriptions, exporting and importing of dgos, and dogs that have traveled. The first data set contains 58,180 observations and 36 variables. The second data set contains 90 observations and 5 variables. The third data set contains 6,194 observations and 8 variables. From these data sets I can see which dogs are better able to perform tricks, which dogs travel more than other dogs, whether these certain dogs are mixed, or purebred, their colors, sex, size, coat length, and many others. Using this data you can find out quite a bit about certain dog species.
+
+  Question 1: Which state exports the most dogs? Which state imports the most dogs?
+  Question 2: Where do dogs travel the most? What state has the most traveling dogs?
+  Question 3: What proportion of dogs are pure-bred? What proportion of dogs have long coats?
+  Question 4: What proportion of dogs are seniors? What breed is put up for adoption the most?
