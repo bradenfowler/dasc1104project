@@ -17,6 +17,16 @@
     </item>
     
     <item>
+      <title>Project Proposal</title>
+      <link>/2020/12/03/project-proposal/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/12/03/project-proposal/</guid>
+      <description>My blog is available at https://dasc1104-blog-project.netlify.app/
+library(here) library(ggplot2) library(tidyverse) library(readxl) knitr::opts_chunk$set(echo = FALSE, tidy = TRUE) ## Observations: 188 ## Variables: 6 ## $ season &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, … ## $ episode &amp;lt;int&amp;gt; 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, … ## $ title &amp;lt;fct&amp;gt; Pilot, Diversity Day, Health Care, The Alliance, Basketba… ## $ imdb_rating &amp;lt;dbl&amp;gt; 7.</description>
+    </item>
+    
+    <item>
       <title>A Plain Markdown Post</title>
       <link>/2016/12/30/a-plain-markdown-post/</link>
       <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>

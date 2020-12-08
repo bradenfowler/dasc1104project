@@ -1,12 +1,13 @@
 ---
 title: "DASC 1104 Project Proposal"
 author: "Braden Fowler"
-date: '2020-12-03'
-output: pdf_document
-urlcolor: Blue
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
-My blog is available at https://dasc1104-blog-project.netlify.app/
+My blog is available at https://dasc1104-blog-project.netlify.app
 ```{r message = FALSE}
 library(here)
 library(ggplot2)
@@ -21,22 +22,24 @@ dat1 <- read.csv(here::here("data", "tidytuesday", "data", "2020", "2020-03-17",
 ```
 
 ```{r}
-glimpse(dat1)
+head(dat1, 10)
 ```
 
-For this project, I am going to be looking at Office Ratings data set contained in the office_ratings.csv file on Tidy Tuesday's website. This data set contains ratings of each episode from the famous US adapted sitcom television series. The data has 188 observation and 6 variables. The variable season tells us which season of the show is being selected from. The variable episode tells us which episode of the season is being selected. The variable title tells us the title of the episode being selected. The variable imdb_rating tell us the rating given for the episode by imdb. The variable total_votes tells us how many people contributed to the imdb_rating; and finally, the variable air_data tells us when that specific episode was aired.
+For this project, I am going to be looking at Office Ratings data set contained in the office_ratings.csv file on Tidy Tuesdays website. This data set contains ratings of each episode from the famous US adapted sitcom television series. The data has 188 observation and 6 variables. The variable season tells us which season of the show is being selected from. The variable episode tells us which episode of the season is being selected. The variable title tells us the title of the episode being selected. The variable imdb_rating tell us the rating given for the episode by imdb. The variable total_votes tells us how many people contributed to the imdb_rating; and finally, the variable air_data tells us when that specific episode was aired.
 
   Question 1: What is the highest rated episode?
   Question 2: Have the ratings of the episodes changed over time?
   Question 3: Which season contains the highest average rating?
       
 ```{r}
-dat2 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-02-05",
-"mortgage.csv"))
+dat2 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-12-17",
+"dog_descriptions.csv"))
 
-dat3 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-02-05", "recessions.csv"))
+dat3 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-12-17",
+"dog_moves.csv"))
 
-dat4 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-02-05", "state_hpi.csv"))
+dat4 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-12-17",
+"dog_travel.csv"))
 ```
 
 ```{r}
@@ -44,8 +47,8 @@ glimpse(dat2)
 glimpse(dat3)
 glimpse(dat4)
 ```
-Using the data from TidyTuesday's website, I am going to look at mortgage rates, times in which there was a recession in the United States, and the housing price index over time. The first data set contains 2,492 observations and 9 variables. The second data set contains 14 observations and 7 variables. The third data set contains 26,877 observations and 5 variables.
 
-  Question 1:
-  Question 2:
-  Question 3:
+Using the data from TidyTuesdays website, I am going to look at dog descriptions, exporting and importing of dgos, and dogs that have traveled. The first data set contains 58,180 observations and 36 variables. The second data set contains 90 observations and 5 variables. The third data set contains 6,194 observations and 8 variables. From these data sets I can see which dogs are better able to perform tricks, which dogs travel more than other dogs, whether these certain dogs are mixed, or purebred, their colors, sex, size, coat length, and many others. Using this data you can find out quite a bit about 
+  Question 1: Is there a trend for housing price index during a recession?
+  Question 2: Which recession was the worst in terms of mortgage rates and housing price index?
+  Question 3: Is there a trend for mortgage rates during a recession?
