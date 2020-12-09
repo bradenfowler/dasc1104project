@@ -40,6 +40,24 @@ glimpse(dat4)
 # Question 1:
 ## Which state exports the most dogs? Which state imports the most dogs?
 
+```{r}
+max_exported_set <- dat3 %>%
+  select(location, exported, imported) %>%
+  group_by(location) %>%
+  summarise(max_exported = max(exported, na.rm = TRUE)) %>%
+  arrange(desc(max_exported))
+
+max_exported_set[1,]
+```
+```{r}
+max_imported_set <- dat3 %>%
+  select(location, exported, imported) %>%
+  group_by(location) %>%
+  summarise(max_imported = max(imported, na.rm = TRUE)) %>%
+  arrange(desc(max_imported))
+
+max_imported_set[1,]
+```
 # Question 2:
 ## Where do dogs travel the most? What state has the most traveling dogs?
 
