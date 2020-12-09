@@ -29,6 +29,14 @@ glimpse(dat1)
 # Question 1:
 ## What is the highest rated episode?
 
+```{r}
+dat1 %>%
+  select(episode_name, imdb_rating) %>%
+  group_by(episode_name) %>%
+  summarise(max_rating = max(imdb_rating, na.rm = TRUE)) %>%
+  arrange(desc(max_rating))
+```
+
 # Question 2:
 ## Have the ratings of the episodes changed over time?
 
