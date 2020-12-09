@@ -18,7 +18,9 @@ knitr::opts_chunk$set(echo = FALSE, tidy = TRUE)
 
 Using the data from TidyTuesdays website, I am going to look at dog descriptions, exporting and importing of dgos, and dogs that have traveled. The first data set contains 58,180 observations and 36 variables. The second data set contains 90 observations and 5 variables. The third data set contains 6,194 observations and 8 variables. From these data sets I can see which dogs are better able to perform tricks, which dogs travel more than other dogs, whether these certain dogs are mixed, or purebred, their colors, sex, size, coat length, and many others. Using this data you can find out quite a bit about certain dog species.
 
-```{r}
+Below is a preview of the data sets I am using for this analysis
+
+```{r include = FALSE}
 dat2 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-12-17",
 "dog_descriptions.csv"))
 
@@ -36,3 +38,13 @@ glimpse(dat4)
 ```
 
 # Question 1:
+## Which state exports the most dogs? Which state imports the most dogs?
+
+# Question 2:
+## Where do dogs travel the most? What state has the most traveling dogs?
+
+# Question 3:
+## What proportion of dogs are pure-bred? What proportion of dogs have long coats?
+
+# Question 4:
+## What proportion of dogs are seniors? What breed is put up for adoption the most?
