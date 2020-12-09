@@ -20,7 +20,7 @@ Using the data from TidyTuesdays website, I am going to look at dog descriptions
 
 Below is a preview of the data sets I am using for this analysis
 
-```{r include = FALSE}
+```{r}
 dat2 <- read.csv(here::here("data", "tidytuesday", "data", "2019", "2019-12-17",
 "dog_descriptions.csv"))
 
