@@ -6,3 +6,22 @@ slug: office-ratings
 categories: []
 tags: []
 ---
+
+```{r message = FALSE}
+library(here)
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+library(schrute)
+knitr::opts_chunk$set(echo = FALSE, tidy = TRUE)
+```
+
+```{r}
+dat1 <- schrute::theoffice
+glimpse(dat1)
+```
+
+
+
+
+
