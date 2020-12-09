@@ -22,7 +22,7 @@
       <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/12/07/office-ratings/</guid>
-      <description>  </description>
+      <description>Office Ratings For this project, I am going to be looking at Office Ratings data set contained in the library “schrute” which I installed through R. This data set contains ratings of each episode from the famous US adapted sitcom television series. The data has 55,130 observation and 12 variables. The variable season tells us which season of the show is being selected from. The variable episode tells us which episode of the season is being selected.</description>
     </item>
     
     <item>
