@@ -38,6 +38,7 @@ results <- dat1 %>%
 
 results[1:5,]
 ```
+The top 5 rated episodes were the Finale, Goodbye, Michael, Stress Relief (Part1&2), A.A.R.M, and Casino Night ranging from 9.3 to 9.7 which are very good ratings.
 
 # Question 2:
 Have the ratings of the seasons changed over time? 
@@ -55,6 +56,7 @@ ggplot(season_stats, aes(x = season, y = mean_rating)) +
   scale_x_continuous(breaks=seq(1,10,1)) +
   scale_y_continuous(limits=c(7.5,9))
 ```
+From this graphic we can see that the show was slowly rated better and better up to season 4 where it peaked, and then began to fall never surpising 8.5 for the rest of the seasons.
 
 # Question 3:
 Which season contains the highest average rating?
@@ -65,8 +67,9 @@ season_stats <- dat1 %>%
   summarise(mean_rating = mean(imdb_rating)) %>%
   arrange(desc(mean_rating))
 
-season_stats[1,]
+season_stats[1:9,]
 ```
+From this dataset we can see that the highest rated season is season 4 with an average rating of 8.65/10, we can also see that the lowest rated season is season 8 with an average rating of 7.67/10. This means the range for ratings for The Office is about 1 point. All the seasons wer rated between 7.67 and 8.65.
 
 # Question 4:
 What are the most reoccuring words throughout the show? Which characters talk the most throughout the show?
