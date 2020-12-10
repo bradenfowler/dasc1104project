@@ -103,7 +103,9 @@ coat_types <- dat2 %>%
 
 ggplot(coat_types, aes(x=coat, y = count))+
   geom_bar(stat = "identity") + 
-  ggtitle("")
+  ggtitle("Prevalence of Coat Type") +
+  xlab("Coat Type") +
+  ylab("Count")
 ```
 
 # Question 4:
