@@ -32,28 +32,24 @@ tags: []
 </div>
 <div id="question-1" class="section level1">
 <h1>Question 1:</h1>
-<div id="what-is-the-highest-rated-episode" class="section level2">
-<h2>What is the highest rated episode?</h2>
-<pre><code>## # A tibble: 186 x 2
-##    episode_name              max_rating
-##    &lt;chr&gt;                          &lt;dbl&gt;
-##  1 Finale                           9.7
-##  2 Goodbye, Michael                 9.7
-##  3 Stress Relief (Parts 1&amp;2)        9.6
-##  4 A.A.R.M                          9.3
-##  5 Casino Night                     9.3
-##  6 Dinner Party                     9.3
-##  7 Goodbye, Toby (Parts 1&amp;2)        9.3
-##  8 Niagara (Parts 1&amp;2)              9.3
-##  9 The Job (Parts 1&amp;2)              9.3
-## 10 Threat Level Midnight            9.3
-## # … with 176 more rows</code></pre>
+<div id="what-are-the-five-highest-rated-episode" class="section level2">
+<h2>What are the five highest rated episode?</h2>
+<pre><code>## # A tibble: 5 x 4
+## # Groups:   episode_name, season [5]
+##   episode_name              season episode max_rating
+##   &lt;chr&gt;                      &lt;int&gt;   &lt;int&gt;      &lt;dbl&gt;
+## 1 Finale                         9      24        9.7
+## 2 Goodbye, Michael               7      22        9.7
+## 3 Stress Relief (Parts 1&amp;2)      5      14        9.6
+## 4 A.A.R.M                        9      22        9.3
+## 5 Casino Night                   2      22        9.3</code></pre>
 </div>
 </div>
 <div id="question-2" class="section level1">
 <h1>Question 2:</h1>
-<div id="have-the-ratings-of-the-episodes-changed-over-time" class="section level2">
-<h2>Have the ratings of the episodes changed over time?</h2>
+<div id="have-the-ratings-of-the-seasons-changed-over-time" class="section level2">
+<h2>Have the ratings of the seasons changed over time?</h2>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 </div>
 <div id="question-3" class="section level1">

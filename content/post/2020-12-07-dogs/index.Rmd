@@ -61,8 +61,20 @@ max_imported_set[1,]
 # Question 2:
 ## Where do dogs travel the most? What state has the most traveling dogs?
 
+```{r}
+
+```
+
 # Question 3:
 ## What proportion of dogs are pure-bred? What proportion of dogs have long coats?
 
+```{r}
+
+```
+
 # Question 4:
 ## What proportion of dogs are seniors? What breed is put up for adoption the most?
+
+```{r}
+
+```

@@ -27,26 +27,48 @@ glimpse(dat1)
 ```
 
 # Question 1:
-## What is the highest rated episode?
+## What are the five highest rated episode?
 
 ```{r}
-dat1 %>%
-  select(episode_name, imdb_rating) %>%
-  group_by(episode_name) %>%
+results <- dat1 %>%
+  select(episode_name, imdb_rating, season, episode) %>%
+  group_by(episode_name, season, episode) %>%
   summarise(max_rating = max(imdb_rating, na.rm = TRUE)) %>%
   arrange(desc(max_rating))
+
+results[1:5,]
 ```
 
 # Question 2:
-## Have the ratings of the episodes changed over time?
+## Have the ratings of the seasons changed over time? 
+
+```{r}
+season_stats <- dat1 %>%
+  group_by(season) %>%
+  summarise(mean_rating = mean(imdb_rating))
+
+ggplot(season_stats, aes(x = season, y = mean_rating)) + 
+  geom_line() +
+  ggtitle("The Office Season Ratings") +
+  xlab("Season") +
+  ylab("Rating") +
+  scale_x_continuous(breaks=seq(1,10,1)) +
+  scale_y_continuous(limits=c(7.5,9))
+```
 
 # Question 3:
 ## Which season contains the highest average rating? On average what episode of the season has the highest average rating?
 
+```{r}
+
+```
+
 # Question 4:
 ## What is the most reoccuring word for each season? Which character talks the most in each season? 
 
+```{r}
 
+```
 
 
 
