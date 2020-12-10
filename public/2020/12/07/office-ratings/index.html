@@ -100,8 +100,7 @@
 </div>
 <div id="question-1" class="section level1">
 <h1>Question 1:</h1>
-<div id="what-are-the-five-highest-rated-episode" class="section level2">
-<h2>What are the five highest rated episode?</h2>
+<p>What are the five highest rated episode?</p>
 <pre><code>## # A tibble: 5 x 4
 ## # Groups:   episode_name, season [5]
 ##   episode_name              season episode max_rating
@@ -112,25 +111,24 @@
 ## 4 A.A.R.M                        9      22        9.3
 ## 5 Casino Night                   2      22        9.3</code></pre>
 </div>
-</div>
 <div id="question-2" class="section level1">
 <h1>Question 2:</h1>
-<div id="have-the-ratings-of-the-seasons-changed-over-time" class="section level2">
-<h2>Have the ratings of the seasons changed over time?</h2>
+<p>Have the ratings of the seasons changed over time?</p>
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-</div>
 </div>
 <div id="question-3" class="section level1">
 <h1>Question 3:</h1>
-<div id="which-season-contains-the-highest-average-rating-on-average-what-episode-of-the-season-has-the-highest-average-rating" class="section level2">
-<h2>Which season contains the highest average rating? On average what episode of the season has the highest average rating?</h2>
-</div>
+<p>Which season contains the highest average rating?</p>
+<pre><code>## # A tibble: 1 x 2
+##   season mean_rating
+##    &lt;int&gt;       &lt;dbl&gt;
+## 1      4        8.65</code></pre>
 </div>
 <div id="question-4" class="section level1">
 <h1>Question 4:</h1>
-<div id="what-is-the-most-reoccuring-word-for-each-season-which-character-talks-the-most-in-each-season" class="section level2">
-<h2>What is the most reoccuring word for each season? Which character talks the most in each season?</h2>
-</div>
+<p>What are the most reoccuring words throughout the show? Which characters talk the most throughout the show?</p>
+<p>To find the most reoccuring words we must first split the column “text” containing dialogue from the characters into seperate individual strings so then we can then place a count function to count each of the individual words that are spoken.</p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 
     </div>

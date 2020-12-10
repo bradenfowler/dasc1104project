@@ -49,6 +49,7 @@ max_exported_set <- dat3 %>%
 
 max_exported_set[1,]
 ```
+From this data you can see that the state in which the most dogs are exported, or in other words, put up from adoption is Texas.
 ```{r}
 max_imported_set <- dat3 %>%
   select(location, exported, imported) %>%
@@ -58,6 +59,7 @@ max_imported_set <- dat3 %>%
 
 max_imported_set[1,]
 ```
+From this data you can see that the state that imports or adopts the most dogs is New York.
 # Question 2:
 Where are dogs found the most? Which states lose the most dogs?
 ```{r}
@@ -66,8 +68,9 @@ found_dogs <- dat4 %>%
   summarise(count = n()) %>%
   arrange(desc(count))
 
-found_dogs[1:10,]
+found_dogs[1:5,]
 ```
+This data shows us that the top 5 states in which lost dogs are found is, Texas, Alabama, Virginia, North Carolina, Maryland
 
 ```{r}
 lost_dogs <- dat4 %>%
@@ -75,8 +78,10 @@ lost_dogs <- dat4 %>%
   summarise(count = n()) %>%
   arrange(desc(count))
 
-lost_dogs[1:10,]
+lost_dogs[1:5,]
 ```
+From this data set we can see that the sates which the lose the most dogs are Virginia, Washington, New Jersey, New York, and Maryland
+
 # Question 3:
 What proportion of dogs are pure-bred? Which coat types are more common, and which coat types are less common?
 
