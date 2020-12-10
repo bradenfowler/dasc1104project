@@ -38,7 +38,7 @@ glimpse(dat4)
 ```
 
 # Question 1:
-## Which state exports the most dogs? Which state imports the most dogs?
+Which state exports the most dogs? Which state imports the most dogs?
 
 ```{r}
 max_exported_set <- dat3 %>%
@@ -59,7 +59,7 @@ max_imported_set <- dat3 %>%
 max_imported_set[1,]
 ```
 # Question 2:
-## Where are dogs found the most? Which states lose the most dogs?
+Where are dogs found the most? Which states lose the most dogs?
 ```{r}
 found_dogs <- dat4 %>%
   group_by(found) %>%
@@ -78,7 +78,7 @@ lost_dogs <- dat4 %>%
 lost_dogs[1:10,]
 ```
 # Question 3:
-## What proportion of dogs are pure-bred? Which coat types are more common, and which coat types are less common?
+What proportion of dogs are pure-bred? Which coat types are more common, and which coat types are less common?
 
 ```{r}
 bred_pure <- dat2 %>%
@@ -102,7 +102,7 @@ ggplot(coat_types, aes(x=coat, y = count))+
 ```
 
 # Question 4:
-## What proportion of dogs are seniors? What primary breed is put up for adoption the most?
+What proportion of dogs are seniors? What primary breed is put up for adoption the most?
 
 ```{r}
 senior_proportion <- dat2 %>%

@@ -27,7 +27,7 @@ glimpse(dat1)
 ```
 
 # Question 1:
-## What are the five highest rated episode?
+What are the five highest rated episode?
 
 ```{r}
 results <- dat1 %>%
@@ -40,7 +40,7 @@ results[1:5,]
 ```
 
 # Question 2:
-## Have the ratings of the seasons changed over time? 
+Have the ratings of the seasons changed over time? 
 
 ```{r}
 season_stats <- dat1 %>%
@@ -57,17 +57,40 @@ ggplot(season_stats, aes(x = season, y = mean_rating)) +
 ```
 
 # Question 3:
-## Which season contains the highest average rating? On average what episode of the season has the highest average rating?
+Which season contains the highest average rating?
 
 ```{r}
+season_stats <- dat1 %>%
+  group_by(season) %>%
+  summarise(mean_rating = mean(imdb_rating)) %>%
+  arrange(desc(mean_rating))
 
+season_stats[1,]
 ```
 
 # Question 4:
-## What is the most reoccuring word for each season? Which character talks the most in each season? 
+What are the most reoccuring words throughout the show? Which characters talk the most throughout the show?
+
+To find the most reoccuring words we must first split the column "text" containing dialogue from the characters into seperate individual strings so then we can then place a count function to count each of the individual words that are spoken.
 
 ```{r}
+reoccuring_words <- dat1 %>%
+  
+```
 
+```{r}
+most_spoken <- dat1 %>%
+  group_by(character) %>%
+  summarise(count = n()) %>%
+  mutate(in_graph = count>250) %>%
+  filter(in_graph == TRUE)
+
+ggplot(most_spoken, aes(x = character, y = count)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ggtitle("Most Spoken Characters in the Office") +
+  xlab("Character") +
+  ylab("Count")
 ```
 
 
