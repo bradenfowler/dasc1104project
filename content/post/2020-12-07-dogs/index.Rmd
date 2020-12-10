@@ -64,12 +64,12 @@ From this data you can see that the state that imports or adopts the most dogs i
 # Question 2:
 Where are dogs found the most? Which states lose the most dogs?
 ```{r}
-found_dogs <- dat4 %>%
+found_dogs2 <- dat4 %>%
   group_by(found) %>%
   summarise(count = n()) %>%
   arrange(desc(count))
 
-found_dogs[1:5,]
+found_dogs2[1:5,]
 ```
 This data shows us that the top 5 states in which lost dogs are found is, Texas, Alabama, Virginia, North Carolina, Maryland
 
