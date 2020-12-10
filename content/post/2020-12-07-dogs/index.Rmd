@@ -78,7 +78,7 @@ lost_dogs <- dat4 %>%
 lost_dogs[1:10,]
 ```
 # Question 3:
-## What proportion of dogs are pure-bred? What proportion of dogs have long coats?
+## What proportion of dogs are pure-bred? Which coat types are more common, and which coat types are less common?
 
 ```{r}
 bred_pure <- dat2 %>%
@@ -89,10 +89,44 @@ bred_pure <- dat2 %>%
 
 bred_pure
 ```
+```{r}
+coat_types <- dat2 %>%
+  select(coat) %>%
+  drop_na(coat) %>%
+  group_by(coat) %>%
+  summarise(count = n())
+
+ggplot(coat_types, aes(x=coat, y = count))+
+  geom_bar(stat = "identity") + 
+  ggtitle("")
+```
 
 # Question 4:
-## What proportion of dogs are seniors? What breed is put up for adoption the most?
+## What proportion of dogs are seniors? What primary breed is put up for adoption the most?
 
 ```{r}
+senior_proportion <- dat2 %>%
+  mutate(count = n()) %>%
+  group_by(age, count) %>%
+  drop_na(age) %>%
+  summarise(value = n()) %>%
+  summarise(percentage = 100*(value/count))
 
+senior_proportion
+```
+
+```{r}
+adoption <- dat2 %>%
+  drop_na(breed_primary) %>%
+  group_by(breed_primary) %>%
+  summarise(count = n()) %>%
+  mutate(worthy = count > 500) %>%
+  filter(worthy == TRUE)
+
+ggplot(adoption, aes(x = breed_primary, y = count)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ggtitle("Dogs for Adoption by Breed") +
+  xlab("Primary Breed") +
+  ylab("Count")
 ```
