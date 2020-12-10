@@ -59,17 +59,35 @@ max_imported_set <- dat3 %>%
 max_imported_set[1,]
 ```
 # Question 2:
-## Where do dogs travel the most? What state has the most traveling dogs?
-
+## Where are dogs found the most? Which states lose the most dogs?
 ```{r}
+found_dogs <- dat4 %>%
+  group_by(found) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
 
+found_dogs[1:10,]
 ```
 
+```{r}
+lost_dogs <- dat4 %>%
+  group_by(contact_state) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+
+lost_dogs[1:10,]
+```
 # Question 3:
 ## What proportion of dogs are pure-bred? What proportion of dogs have long coats?
 
 ```{r}
+bred_pure <- dat2 %>%
+  group_by(breed_mixed, count = n()) %>%
+  summarise(pure_bred = n()) %>%
+  group_by(breed_mixed, count, pure_bred) %>%
+  summarise(percent_pure = (pure_bred/count)*100) 
 
+bred_pure
 ```
 
 # Question 4:
