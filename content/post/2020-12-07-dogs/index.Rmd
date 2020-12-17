@@ -141,4 +141,4 @@ ggplot(adoption, aes(x = breed_primary, y = count)) +
   xlab("Primary Breed") +
   ylab("Count")
 ```
-From these graphics we can see that the dog breed put up for adoption most is the PitBull Terrier followed by the Labrador Retriever then the Chihuaua.
+From these graphics we can see that the dog breed put up for adoption most is the PitBull Terrier followed by the Labrador Retriever then the Chihuaua. You could assume that these dogs are either bought more frequently, or maybe cause a lot of problems with the owners.
