@@ -88,7 +88,7 @@ ggplot(most_spoken, aes(x = character, y = count)) +
   xlab("Character") +
   ylab("Count")
 ```
-
+From this bar graph yoy can see that the charcter that spoke the most throughout the show was Michael, followed by Dwight, Jim, and then Pam. You could say that these characters are probably the most important, or the "main" characters throughout most of the show.
 
 
 
